@@ -2,7 +2,7 @@
 
 webside: https://shuyi-huang.github.io/Medical-History-Form/
 
- the project run by VS Code
+This project can be built and run using VS Code.
 
 Features
 
