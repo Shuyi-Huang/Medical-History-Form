@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical History Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Medical History Form</h2>
+        
+        <form action="" method="POST">
+            <fieldset>
+                <legend>Full Name</legend>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>What is your age?</legend>
+                <input type="number" id="age" name="age" min='1' max="100" placeholder="ex: 23" required><br>
+                <div id="error-message"></div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>What is your gender?</legend>
+                <select id="gender" name="gender" required>
+                    <option value="">Please Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Contact Number</legend>
+                <input type="tel" id="contact" name="contact" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="04xxxxxxxx" maxlength="10" required><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Email Address</legend>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Check the conditions that apply to you or any member of your immediate relatives:</legend>
+                <label class="checkbox-label"><input type="checkbox" name="conditions" value="asthma"> Asthma</label>
+                <label class="checkbox-label"><input type="checkbox" name="conditions" value="diabetes"> Diabetes</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Check the symptoms that you're currently experiencing:</legend>
+                <label class="checkbox-label"><input type="checkbox" name="symptoms" value="fever"> Fever</label>
+                <label class="checkbox-label"><input type="checkbox" name="symptoms" value="cough"> Cough</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Are you currently taking any medication?</legend>
+                <label><input type="radio" name="medication" value="yes"> Yes</label>
+                <label><input type="radio" name="medication" value="no"> No </label><br>
+                <textarea id="medication_list" name="medication_list" rows="4" placeholder="Please list them here..."></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Do you have any medication allergies?</legend>
+                <label><input type="radio" name="allergies" value="yes"> Yes</label>
+                <label><input type="radio" name="allergies" value="no"> No</label><br>
+                <textarea id="allergies_list" name="allergies_list" rows="4" placeholder="Please list them here..."></textarea><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Do you use any kind of tobacco or have you ever used them?</legend>
+                <label><input type="radio" name="tobacco" value="yes"> Yes</label>
+                <label><input type="radio" name="tobacco" value="no"> No</label><br>
+                <textarea id="tobacco_details" name="tobacco_details" rows="4" placeholder="What kind of tobacco products? How long have you used/been using them? Type here..." ></textarea><br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Do you use any kind of illegal drugs or have you ever used them?</legend>
+                <label><input type="radio" name="illegal_drugs" value="yes"> Yes</label>
+                <label><input type="radio" name="illegal_drugs" value="no"> No</label><br>
+                
+            </fieldset>
+            
+            <fieldset>
+                <legend>How often do you consume alcohol?</legend>
+                <input type="text" id="alcohol_frequency" name="alcohol_frequency" placeholder="Type here..."><br>
+            </fieldset>
+            
+            <input type="submit" class='submit_button' value="Submit">
+        </form>
+        <footer>
+            &copy; 2024 Medical Clinics. All rights reserved.
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
